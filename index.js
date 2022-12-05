@@ -578,6 +578,7 @@ class QueryCursor {
 		
 		if (me.connection.isUseGzip) {
 			params.headers['Accept-Encoding']  = 'gzip';
+			params.gzip = true;
 		}
 		
 		params['url'] = url.toString();
