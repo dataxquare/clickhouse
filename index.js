@@ -207,7 +207,7 @@ function encodeValue(quote, v, _format, isArray) {
 			if (v instanceof Array) {
 				return '[' + v.map(function (i) {
 					return encodeValue(true, i, format, true);
-				}).join(',') + ']';
+				}).map(String).join(',') + ']';
 			}
 			
 			// TODO: tuples support
